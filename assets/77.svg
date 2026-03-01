@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#f1f5f9"/>
+  <circle cx="512" cy="512" r="360" fill="#ffffff" stroke="#e5e7eb" stroke-width="4"/>
+  <path d="M512 370c80 0 145 65 145 145s-65 145-145 145V370z" fill="#dc2626"/>
+  <path d="M512 660c-80 0-145-65-145-145s65-145 145-145v290z" fill="#2563eb"/>
+  <rect x="300" y="250" width="32" height="220" rx="8" fill="#111827"/>
+  <rect x="356" y="250" width="32" height="220" rx="8" fill="#111827"/>
+  <rect x="412" y="250" width="32" height="220" rx="8" fill="#111827"/>
+  <rect x="580" y="550" width="32" height="220" rx="8" fill="#111827"/>
+  <rect x="636" y="550" width="32" height="220" rx="8" fill="#111827"/>
+  <rect x="692" y="550" width="32" height="220" rx="8" fill="#111827"/>
+  <path d="M180 197 Q 512 170 844 197" stroke="#0ea5e9" stroke-width="5" fill="none" opacity="0.35"/>
+  <text x="512" y="870" text-anchor="middle" font-size="44" font-family="Arial, sans-serif" fill="#0f172a">March 1st Spirit #77</text>
+  <text x="512" y="920" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#475569">대한독립 만세 · 3.1절 기념 컬렉션</text>
+</svg>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3.1절 NFT 민팅</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:1000px;margin:0 auto;padding:20px;background:#f8fafc;color:#0f172a}
+    .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px;margin-bottom:14px}
+    button,input{padding:10px;border-radius:8px;border:1px solid #cbd5e1}
+    button{cursor:pointer;background:#2563eb;color:#fff;border:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+    img{width:100%;border:1px solid #e2e8f0;border-radius:8px;background:white}
+    code{background:#e2e8f0;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <h1>🇰🇷 3.1절 테마 NFT 100 컬렉션</h1>
+  <p>이 페이지는 <b>GitHub Pages</b>에서 동작하는 민팅 프론트엔드입니다. 컨트랙트 주소 입력 후 민팅 가능합니다.</p>
+
+  <div class="card">
+    <h3>민팅 설정</h3>
+    <p><button id="connect">지갑 연결</button> <span id="wallet">미연결</span></p>
+    <p>컨트랙트 주소: <input id="contract" placeholder="0x..." style="width:420px"/></p>
+    <p>메타데이터 Base URI: <input id="baseUri" value="https://raw.githubusercontent.com/1xp-muhee/march1-nft-eth/master/metadata/" style="width:600px"/></p>
+    <p>민팅할 토큰 번호(1~100): <input id="tokenId" type="number" min="1" max="100" value="1"/></p>
+    <p><button id="mint">민팅하기 (ETH 필요)</button></p>
+    <p id="status"></p>
+  </div>
+
+  <div class="card">
+    <h3>프리뷰 (샘플 12개)</h3>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <div class="card">
+    <h3>컨트랙트 ABI (필요 함수)</h3>
+    <pre><code>function mint(address to, string tokenURI_) external payable</code></pre>
+    <p>기본 mintPrice는 컨트랙트에서 <code>0.003 ETH</code> 입니다.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+  <script>
+    const { ethers } = window;
+    const walletEl = document.getElementById('wallet');
+    const statusEl = document.getElementById('status');
+    const gridEl = document.getElementById('grid');
+    let signer;
+
+    for(let i=1;i<=12;i++){
+      const img = document.createElement('img');
+      img.src = `../assets/${i}.svg`;
+      img.alt = `#${i}`;
+      gridEl.appendChild(img);
+    }
+
+    document.getElementById('connect').onclick = async () => {
+      if(!window.ethereum) return alert('메타마스크 필요');
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      await provider.send('eth_requestAccounts', []);
+      signer = await provider.getSigner();
+      walletEl.textContent = await signer.getAddress();
+    };
+
+    document.getElementById('mint').onclick = async () => {
+      try {
+        if(!signer) return alert('지갑 먼저 연결');
+        const contractAddr = document.getElementById('contract').value.trim();
+        const baseUri = document.getElementById('baseUri').value.trim();
+        const tokenId = Number(document.getElementById('tokenId').value);
+        if(!contractAddr) return alert('컨트랙트 주소 입력');
+        if(tokenId < 1 || tokenId > 100) return alert('1~100 입력');
+
+        const abi = ["function mint(address to, string tokenURI_) external payable"];
+        const c = new ethers.Contract(contractAddr, abi, signer);
+        const to = await signer.getAddress();
+        const tokenUri = `${baseUri}${tokenId}.json`;
+
+        statusEl.textContent = '트랜잭션 전송중...';
+        const tx = await c.mint(to, tokenUri, { value: ethers.parseEther('0.003') });
+        statusEl.innerHTML = `전송됨: <a href='https://etherscan.io/tx/${tx.hash}' target='_blank'>${tx.hash}</a>`;
+        await tx.wait();
+        statusEl.innerHTML += ' ✅ 민팅 완료';
+      } catch (e) {
+        statusEl.textContent = '실패: ' + (e.shortMessage || e.message);
+      }
+    };
+  </script>
+</body>
+</html>
