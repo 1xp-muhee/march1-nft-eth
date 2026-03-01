@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <rect width="1024" height="1024" fill="#f8fafc"/>
-  <circle cx="512" cy="512" r="360" fill="#ffffff" stroke="#e5e7eb" stroke-width="4"/>
-  <path d="M512 370c80 0 145 65 145 145s-65 145-145 145V370z" fill="#dc2626"/>
-  <path d="M512 660c-80 0-145-65-145-145s65-145 145-145v290z" fill="#2563eb"/>
-  <rect x="300" y="250" width="32" height="220" rx="8" fill="#111827"/>
-  <rect x="356" y="250" width="32" height="220" rx="8" fill="#111827"/>
-  <rect x="412" y="250" width="32" height="220" rx="8" fill="#111827"/>
-  <rect x="580" y="550" width="32" height="220" rx="8" fill="#111827"/>
-  <rect x="636" y="550" width="32" height="220" rx="8" fill="#111827"/>
-  <rect x="692" y="550" width="32" height="220" rx="8" fill="#111827"/>
-  <path d="M180 210 Q 512 180 844 210" stroke="#ef4444" stroke-width="5" fill="none" opacity="0.35"/>
-  <text x="512" y="870" text-anchor="middle" font-size="44" font-family="Arial, sans-serif" fill="#0f172a">March 1st Spirit #65</text>
-  <text x="512" y="920" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#475569">대한독립 만세 · 3.1절 기념 컬렉션</text>
+  <rect width="1024" height="1024" fill="#0f172a"/><path d="M-40 120 Q 256 102 512 120 T 1064 120" stroke="#f97316" stroke-width="10" fill="none" opacity="0.35"/><path d="M-40 212 Q 256 181 512 212 T 1064 212" stroke="#0ea5e9" stroke-width="12" fill="none" opacity="0.35"/><path d="M-40 304 Q 256 273 512 304 T 1064 304" stroke="#f97316" stroke-width="14" fill="none" opacity="0.35"/><path d="M-40 396 Q 256 359 512 396 T 1064 396" stroke="#0ea5e9" stroke-width="10" fill="none" opacity="0.35"/><path d="M-40 488 Q 256 453 512 488 T 1064 488" stroke="#f97316" stroke-width="12" fill="none" opacity="0.35"/><path d="M-40 580 Q 256 560 512 580 T 1064 580" stroke="#0ea5e9" stroke-width="14" fill="none" opacity="0.35"/><path d="M-40 672 Q 256 625 512 672 T 1064 672" stroke="#f97316" stroke-width="10" fill="none" opacity="0.35"/><path d="M-40 764 Q 256 720 512 764 T 1064 764" stroke="#0ea5e9" stroke-width="12" fill="none" opacity="0.35"/><path d="M-40 856 Q 256 812 512 856 T 1064 856" stroke="#f97316" stroke-width="14" fill="none" opacity="0.35"/><path d="M-40 948 Q 256 907 512 948 T 1064 948" stroke="#0ea5e9" stroke-width="10" fill="none" opacity="0.35"/>
+  <circle cx="512" cy="512" r="330" fill="#ecfeff" stroke="#f8fafc" stroke-width="6"/>
+
+  <g transform="translate(512 507) rotate(185)">
+    <circle cx="0" cy="0" r="156" fill="#ecfeff" opacity="0.22"/>
+    <path d="M0 -146 A 146 146 0 1 1 0 146 A 73 73 0 1 0 0 -146" fill="#f97316"/>
+    <path d="M0 146 A 146 146 0 1 1 0 -146 A 73 73 0 1 0 0 146" fill="#0ea5e9"/>
+  </g>
+
+  <g opacity="0.94">
+    <g transform="rotate(-23 512 512)"><rect x="323" y="280" width="130" height="14" rx="5" fill="#111827"/><rect x="323" y="316" width="55" height="14" rx="5" fill="#111827"/><rect x="398" y="316" width="55" height="14" rx="5" fill="#111827"/><rect x="323" y="352" width="130" height="14" rx="5" fill="#111827"/></g>
+    <g transform="translate(380 0) rotate(23 512 512)"><rect x="339" y="312" width="61" height="14" rx="5" fill="#111827"/><rect x="420" y="312" width="61" height="14" rx="5" fill="#111827"/><rect x="339" y="348" width="61" height="14" rx="5" fill="#111827"/><rect x="420" y="348" width="61" height="14" rx="5" fill="#111827"/><rect x="339" y="384" width="142" height="14" rx="5" fill="#111827"/></g>
+    <g transform="translate(0 380) rotate(23 512 512)"><rect x="339" y="296" width="61" height="14" rx="5" fill="#111827"/><rect x="420" y="296" width="61" height="14" rx="5" fill="#111827"/><rect x="339" y="332" width="142" height="14" rx="5" fill="#111827"/><rect x="339" y="368" width="61" height="14" rx="5" fill="#111827"/><rect x="420" y="368" width="61" height="14" rx="5" fill="#111827"/></g>
+    <g transform="translate(380 380) rotate(-23 512 512)"><rect x="347" y="304" width="130" height="14" rx="5" fill="#111827"/><rect x="347" y="340" width="55" height="14" rx="5" fill="#111827"/><rect x="422" y="340" width="55" height="14" rx="5" fill="#111827"/><rect x="347" y="376" width="55" height="14" rx="5" fill="#111827"/><rect x="422" y="376" width="55" height="14" rx="5" fill="#111827"/></g>
+  </g>
+
+  <text x="817.7" y="599.7" text-anchor="middle" dominant-baseline="middle" font-size="20" fill="#f97316" opacity="0.75">☼</text><text x="773.2" y="708.8" text-anchor="middle" dominant-baseline="middle" font-size="41" fill="#0ea5e9" opacity="0.75">☾</text><text x="517.8" y="841.9" text-anchor="middle" dominant-baseline="middle" font-size="43" fill="#f97316" opacity="0.75">✸</text><text x="352.8" y="811.3" text-anchor="middle" dominant-baseline="middle" font-size="46" fill="#0ea5e9" opacity="0.75">✹</text><text x="213.4" y="632.6" text-anchor="middle" dominant-baseline="middle" font-size="37" fill="#f97316" opacity="0.75">✦</text><text x="217.9" y="427.7" text-anchor="middle" dominant-baseline="middle" font-size="33" fill="#0ea5e9" opacity="0.75">☼</text><text x="298.6" y="257.7" text-anchor="middle" dominant-baseline="middle" font-size="31" fill="#f97316" opacity="0.75">☾</text><text x="410.6" y="200.1" text-anchor="middle" dominant-baseline="middle" font-size="24" fill="#0ea5e9" opacity="0.75">✸</text><text x="637.3" y="230.6" text-anchor="middle" dominant-baseline="middle" font-size="33" fill="#f97316" opacity="0.75">✹</text><text x="788.5" y="339.2" text-anchor="middle" dominant-baseline="middle" font-size="30" fill="#0ea5e9" opacity="0.75">✦</text>
+
+  <text x="512" y="900" text-anchor="middle" font-size="38" font-family="Inter, Arial, sans-serif" fill="#ecfeff">March 1st Spirit #65</text>
+  <text x="512" y="942" text-anchor="middle" font-size="22" font-family="Inter, Arial, sans-serif" fill="#f8fafc">대한독립 만세 · Unique Edition</text>
 </svg>

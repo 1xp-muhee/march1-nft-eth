@@ -1,6 +1,6 @@
 {
   "name": "March 1st Spirit #22",
-  "description": "Korean March 1st Independence Movement commemorative NFT collection (educational/art project).",
+  "description": "Korean March 1st Independence Movement commemorative generative NFT collection.",
   "image": "./assets/22.svg",
   "attributes": [
     {
@@ -8,12 +8,24 @@
       "value": "3.1절"
     },
     {
-      "trait_type": "Edition",
-      "value": 22
+      "trait_type": "Background",
+      "value": "stripes"
     },
     {
-      "trait_type": "Collection Size",
-      "value": 100
+      "trait_type": "Badge",
+      "value": "circle"
+    },
+    {
+      "trait_type": "Palette",
+      "value": 5
+    },
+    {
+      "trait_type": "Rotation",
+      "value": 164
+    },
+    {
+      "trait_type": "Edition",
+      "value": 22
     }
   ]
 }
